@@ -1,0 +1,5 @@
+2025-11-08T19:09:00.108865+00:00 OMKAR2004 systemd[1]: apport-autoreport.path - Process error reports when automatic reporting is enabled (file watch) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+2025-11-08T19:09:00.108868+00:00 OMKAR2004 systemd[1]: apport-autoreport.timer - Process error reports when automatic reporting is enabled (timer based) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+2025-11-08T19:09:00.275614+00:00 OMKAR2004 snapd[176]: helpers.go:160: error trying to compare the snap system key: system-key missing on disk
+2025-11-08T19:24:02.411816+00:00 OMKAR2004 wsl-pro-service[6695]: WARNING Could not ensure valid Landscape configuration: could not register distro to Landscape: could not enable Landscape: /usr/bin/landscape-config: error: exit status 2.
+2025-11-08T19:24:02.412101+00:00 OMKAR2004 wsl-pro-service[6695]: landscape-config: error: no such option: --register-if-needed
