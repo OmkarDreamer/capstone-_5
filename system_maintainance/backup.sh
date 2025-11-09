@@ -1,0 +1,13 @@
+#!/bin/bash
+BACKUP_SRC="/home/$USER/Documents"
+BACKUP_DEST="/home/$USER/backups"
+TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
+BACKUP_FILE="$BACKUP_DEST/backup_$TIMESTAMP.tar.gz"
+mkdir -p "$BACKUP_DEST"
+echo "Starting backup of $BACKUP_SRC..."
+tar -czf "$BACKUP_FILE" "$BACKUP_SRC" 2>/dev/null
+if [ $? -eq 0 ]; then
+    echo "Backup completed successfully: $BACKUP_FILE"
+else
+    echo "Backup failed!"
+fi

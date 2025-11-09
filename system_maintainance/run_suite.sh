@@ -1,0 +1,17 @@
+#!/bin/bash
+LOG_DIR="/home/$USER/system_logs"
+LOG_FILE="$LOG_DIR/system_maintenance_$(date +%F).log"
+mkdir -p "$LOG_DIR"
+{
+    echo "=========================================="
+    echo "System Maintenance Run: $(date)"
+    echo "=========================================="
+    echo "Running Backup..."
+    bash backup.sh || echo "Backup failed!" 
+    echo "Running Update & Cleanup..."
+    bash update_cleanup.sh || echo "Update or Cleanup failed!" 
+    echo "Running Log Monitor..."
+    bash log_monitor.sh || echo "Log Monitor encountered issues!"
+    echo "All tasks completed on $(date)"
+    echo "=========================================="
+} | tee -a "$LOG_FILE"
